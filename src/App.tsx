@@ -28,8 +28,11 @@ import paypalIcon from "./assets/images/paypal-icon.svg";
 import ibmIcon from "./assets/images/ibm-icon.svg";
 
 function App() {
-  const [count, setCount] = useState<number>(0);
-  const [isRunning, setIsRunning] = useState<boolean>(true);
+  const [count, setCount] = useState<number>(() => {
+    const savedCount = localStorage.getItem("count");
+    return savedCount ? parseInt(savedCount, 10) : 0;
+  });
+  const [isRunning, setIsRunning] = useState<boolean>(false);
 
   useEffect(() => {
     let intervalId: NodeJS.Timeout;
@@ -46,13 +49,20 @@ function App() {
   }, [isRunning]);
 
   const handleToggle = () => {
-    // Se parar, reinicia o contador
     if (isRunning) {
       setCount(0);
+      setIsRunning(false);
+    } else {
+      // Inicia o contador e salva o estado
+      setCount(0);
+      setIsRunning(true);
     }
-
-    setIsRunning(!isRunning);
   };
+
+  useEffect(() => {
+    // Salva o estado do contador no localStorage
+    localStorage.setItem("count", count.toString());
+  }, [count]);
 
   return (
     <div className="app-container">
