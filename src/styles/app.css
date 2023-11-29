@@ -1,0 +1,240 @@
+.app-container {
+  position: relative;
+  background-color: #fafafa;
+}
+
+.section {
+  height: 81vh;
+  padding-left: 12rem;
+  padding-right: 12rem;
+}
+
+/* HOME */
+
+.home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+  flex-direction: column;
+}
+
+.home-images {
+  position: absolute;
+  z-index: 1;
+}
+
+.home-images .angular-logo {
+  position: absolute;
+  left: -40rem;
+  top: -15rem;
+}
+.home-images .vue-logo {
+  position: absolute;
+  left: -30rem;
+  bottom: -25rem;
+}
+.home-images .react-logo {
+  position: absolute;
+  right: -35rem;
+  top: -15rem;
+}
+.home-images .flutter-logo {
+  position: absolute;
+  right: -25rem;
+  bottom: -15rem;
+}
+
+.home-slogan {
+  font-size: 12px;
+  font-weight: 500;
+
+  border: 1px solid #e4e4e7;
+  border-radius: 60px;
+  padding: 0.5rem;
+}
+
+.home-title {
+  font-size: 52px;
+  text-align: center;
+  margin: 1rem;
+
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+.home-title .gradient {
+  background: linear-gradient(
+    90deg,
+    rgba(113, 134, 255, 0.92) 55.93%,
+    rgba(254, 117, 135, 0.92) 92.29%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.home-description {
+  font-size: 14px;
+  font-weight: 400;
+  text-align: center;
+}
+
+@keyframes floatingAnimation {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.home-images img {
+  animation: floatingAnimation 3s infinite;
+}
+
+/* SECTIONS */
+
+.framework {
+  display: flex;
+  flex-direction: column;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+.section-title h2 {
+  font-size: 38px;
+  font-weight: 700;
+}
+
+.section-title p {
+  font-size: 16px;
+  color: #52525b;
+  font-weight: 500;
+  margin-top: 0.5rem;
+}
+
+.section-content {
+  display: flex;
+}
+.section-container-left,
+.section-container-right {
+  flex: 1;
+}
+
+.section-container-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding-right: 4rem;
+}
+
+.section-container-right {
+  padding-left: 4rem;
+}
+
+.section-question {
+  margin-bottom: 1rem;
+}
+
+.section-question-title {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #222;
+}
+
+.section-question-text {
+  font-size: 16px;
+  font-weight: 400;
+  color: #52525b;
+  text-align: justify;
+  width: 30rem;
+}
+
+.sections-list {
+  margin-bottom: 1rem;
+}
+.section-list-item {
+  margin-top: 0.5rem;
+  font-size: 16px;
+  font-weight: 500;
+  color: #52525b;
+}
+
+.icon-companies {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.button-container {
+  position: relative;
+  margin-top: 7.25rem;
+  align-self: center;
+}
+
+.button-section {
+  background-color: #000;
+  color: #fff;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  padding: 0.75rem 3.75rem;
+  border-radius: 10px;
+  border: none;
+  position: relative;
+  z-index: 3;
+  cursor: pointer;
+}
+
+.button-shadow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    #44bcff -0.55%,
+    #44b0ff 22.86%,
+    #ff44ec 48.36%,
+    #ff44ec 73.33%,
+    #ff675e 99.34%
+  );
+  z-index: 1;
+  filter: blur(22px);
+}
+
+.section-counter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.counter-title,
+.change-theme-title {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.counter-number {
+  font-size: 165px;
+  font-weight: 700;
+}
+
+.example {
+  margin-top: 2rem;
+  cursor: pointer;
+  align-self: auto;
+}
+
+.section-change-theme {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
